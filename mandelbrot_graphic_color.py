@@ -45,10 +45,12 @@ for x in range(IMAGE_WIDTH):
         color = get_color_from_iteration(m)
         draw.point([x, y], color)
 
+# vertical grid bars (100 pixels apart)
 for x in range(0, IMAGE_WIDTH, 100):
     draw.line((x, 0, x, IMAGE_HEIGHT), fill=128)
     draw.text((x, IMAGE_HEIGHT / 2 - 10), str(x * step_x + REAL_BOTTOM), fill=(255, 0, 0, 128), font=font)
 
+# horizontal grid bars (100 pixels apart)
 for y in range(0, IMAGE_HEIGHT, 100):
     draw.line((0, y, IMAGE_WIDTH, y), fill=128)
     draw.text((IMAGE_WIDTH / 2 + 10, y), str(y * step_y + IMAGINARY_BOTTOM), fill=(255, 0, 0, 128), font=font)
